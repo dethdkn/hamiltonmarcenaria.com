@@ -56,7 +56,7 @@ const current = ref('Início')
 	<section class="w-full h-screen bg-[url('/images/hmmbg.jpg')] bg-cover relative bg-top before:content-[''] before:absolute before:bg-[#00000099] before:bottom-0 before:top-0 before:left-0 before:right-0">
 		<div class="absolute top-0 bottom-0 left-0 right-0 flex flex-col items-center justify-center text-center">
 			<h1 class="mt-[30px] mb-[10px] text-[28px] md:text-[48px] font-bold leading-[36px] md:leading-[56px] uppercase text-white">
-				Hamilton Marcenario Moderna
+				Hamilton Marcenaria Moderna
 			</h1>
 			<h2 class="text-[#eee] mb-[50px] md:text-[24px] text-[18px]">
 				A melhor marcenaria do Rio de Janeiro

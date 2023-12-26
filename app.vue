@@ -126,9 +126,9 @@ onMounted(() => {
 							<div class="flex flex-col justify-center items-center float-left bg-white w-[64px] h-[64px] text-center rounded-[50%] border-2 border-[#fc0324]">
 								<Icon name="map:furniture-store" color="#fc0324" size="30px" />
 							</div>
-							<h4 class="ms-[80px] mb-[5px] text-[18px] uppercase font-medium text-black">
+							<p class="ms-[80px] mb-[5px] text-[18px] uppercase font-medium text-black">
 								Móveis Planejados em MDF
-							</h4>
+							</p>
 							<p class="ms-[80px] text-[14px]">
 								Na Hamilton Marcenaria Moderna, criamos móveis planejados em MDF de alta qualidade, combinando elegância e funcionalidade para transformar visões em realidade.
 							</p>
@@ -137,9 +137,9 @@ onMounted(() => {
 							<div class="flex flex-col justify-center items-center float-left bg-white w-[64px] h-[64px] text-center rounded-[50%] border-2 border-[#fc0324]">
 								<Icon name="solar:closet-bold" color="#fc0324" size="30px" />
 							</div>
-							<h4 class="ms-[80px] mb-[5px] text-[18px] uppercase font-medium text-black">
+							<p class="ms-[80px] mb-[5px] text-[18px] uppercase font-medium text-black">
 								Modulados Inovadores
-							</h4>
+							</p>
 							<p class="ms-[80px] text-[14px]">
 								Descubra soluções versáteis e contemporâneas com nossos móveis modulados, projetados para otimizar espaços e adicionar um toque moderno à sua decoração.
 							</p>
@@ -148,15 +148,15 @@ onMounted(() => {
 							<div class="flex flex-col justify-center items-center float-left bg-white w-[64px] h-[64px] text-center rounded-[50%] border-2 border-[#fc0324]">
 								<Icon name="entypo:tools" color="#fc0324" size="30px" />
 							</div>
-							<h4 class="ms-[80px] mb-[5px] text-[18px] uppercase font-medium text-black">
+							<p class="ms-[80px] mb-[5px] text-[18px] uppercase font-medium text-black">
 								Reformas em Geral
-							</h4>
+							</p>
 							<p class="ms-[80px] text-[14px]">
 								De renovações de móveis a remodelações completas, nossa equipe especializada em reformas transforma espaços, garantindo funcionalidade e estética excepcionais.
 							</p>
 						</div>
 					</div>
-					<NuxtImg src="/images/sobre.png" class="order-1 lg:order-2 lg:flex w-full h-96 object-cover lg:w-1/2 lg:h-auto mb-[10px] mx-auto p-4 rounded-3xl max-h-[500px]" />
+					<NuxtImg src="/images/sobre.png" alt="Foto da Loja Hamilton Marcenaria Moderna" class="order-1 lg:order-2 lg:flex w-full h-96 object-cover lg:w-1/2 lg:h-auto mb-[10px] mx-auto p-4 rounded-3xl max-h-[500px]" />
 				</div>
 			</div>
 		</section>
@@ -183,7 +183,7 @@ onMounted(() => {
 			<h2 class="text-[#333] font-bold text-[32px] pt-[15px] lg:pt-0 uppercase">
 				Contato
 			</h2>
-			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.353524138657!2d-43.23524962514366!3d-22.90032783763937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997ef332e8cc97%3A0x9820c8f34773c58c!2sR.%20S%C3%A3o%20Luiz%20Gonzaga%2C%201064%20-%20Benfica%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2020910-062!5e0!3m2!1sen!2sbr!4v1703626146204!5m2!1sen!2sbr" width="100%" height="380" frameborder="0" style="border:0" allowfullscreen />
+			<iframe title="Mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.353524138657!2d-43.23524962514366!3d-22.90032783763937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997ef332e8cc97%3A0x9820c8f34773c58c!2sR.%20S%C3%A3o%20Luiz%20Gonzaga%2C%201064%20-%20Benfica%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2020910-062!5e0!3m2!1sen!2sbr!4v1703626146204!5m2!1sen!2sbr" width="100%" height="380" frameborder="0" style="border:0" allowfullscreen />
 			<div class="grid grid-cols-1 sm:grid-cols-2 place-items-center mt-10 p-5">
 				<div class="max-w-[300px]">
 					<Icon name="mingcute:location-2-line" color="#fc0324" size="24px" class="inline-block" />

@@ -7,7 +7,7 @@ withDefaults(defineProps<{
 </script>
 
 <template>
-	<div class="h-full w-full flex items-start justify-start bg-red-50 relative">
+	<div class="h-full w-full flex items-start justify-start bg-white relative">
 		<h1 class="text-7xl p-20 font-bold text-left text-gray-900">
 			{{ title }}
 		</h1>

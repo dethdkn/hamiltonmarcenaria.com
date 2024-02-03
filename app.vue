@@ -78,6 +78,11 @@ onMounted(() => {
 	validateY(y.value)
 	getActive(y.value)
 })
+
+defineOgImageComponent('Og', {
+	title: 'Hamilton Marcenaria Moderna',
+
+})
 </script>
 
 <template>
@@ -162,7 +167,7 @@ onMounted(() => {
 							</p>
 						</div>
 					</div>
-					<NuxtImg src="/images/sobre.png" alt="Foto da Loja Hamilton Marcenaria Moderna" class="order-1 lg:order-2 lg:flex w-full h-96 object-cover lg:w-1/2 lg:h-auto mb-[10px] mx-auto p-4 rounded-3xl max-h-[500px]" />
+					<NuxtImg src="/images/sobre.jpg" alt="Foto da Loja Hamilton Marcenaria Moderna" class="order-1 lg:order-2 lg:flex w-full h-96 object-cover lg:w-1/2 lg:h-auto mb-[10px] mx-auto p-4 rounded-3xl max-h-[500px]" />
 				</div>
 			</div>
 		</section>
@@ -195,7 +200,7 @@ onMounted(() => {
 							Faça um orçamento
 						</h3>
 						<p class="cta-text">
-							Clique no botão a direita e entre em contato pelo whatsapp
+							Clique no botão para entrar em contato pelo whatsapp
 						</p>
 					</div>
 					<NuxtLink to="https://api.whatsapp.com/send?phone=5521983833874&text=Ol%C3%A1%20Hamilton,%20gostaria%20de%20contratar%20um%20servi%C3%A7o!" external target="_blank" class="uppercase text-[16px] inline-block py-[8px] px-[28px] rounded-[50px] transition-all duration-500 m-[10px] font-medium border-2 border-white text-white hover:bg-[#fc0324] hover:border-[#fc0324] cursor-pointer mt-10 lg:mt-0">

@@ -8,6 +8,7 @@ const yScrolled = ref(false)
 const navigation = ref([
 	{ title: 'Início' },
 	{ title: 'Sobre' },
+	{ title: 'Fotos' },
 	{ title: 'Orçamento' },
 	{ title: 'Contato' },
 	{ title: 'Whatsapp', url: 'https://api.whatsapp.com/send?phone=5521983833874&text=Ol%C3%A1%20Hamilton,%20gostaria%20de%20contratar%20um%20servi%C3%A7o!' },
@@ -18,6 +19,7 @@ const current = ref('Início')
 
 const inicio = ref<HTMLElement | null>()
 const sobre = ref<HTMLElement | null>()
+const fotos = ref<HTMLElement | null>()
 const orcamento = ref<HTMLElement | null>()
 const contato = ref<HTMLElement | null>()
 
@@ -26,6 +28,8 @@ function scrollTo(to: string) {
 		window.scrollTo({ top: inicio.value.offsetTop, behavior: 'smooth' })
 	if (to === 'Sobre' && sobre.value)
 		window.scrollTo({ top: sobre.value.offsetTop, behavior: 'smooth' })
+	if (to === 'Fotos' && fotos.value)
+		window.scrollTo({ top: fotos.value.offsetTop, behavior: 'smooth' })
 	if (to === 'Orçamento' && orcamento.value)
 		window.scrollTo({ top: orcamento.value.offsetTop - 150, behavior: 'smooth' })
 	if (to === 'Contato' && contato.value)
@@ -44,6 +48,8 @@ function getActive(val: number) {
 		current.value = 'Início'
 	if (sobre.value && val >= sobre.value.offsetTop)
 		current.value = 'Sobre'
+	if (fotos.value && val >= fotos.value.offsetTop)
+		current.value = 'Fotos'
 	if (orcamento.value && val >= orcamento.value.offsetTop - 150)
 		current.value = 'Orçamento'
 	if (contato.value && val >= contato.value.offsetTop)
@@ -159,6 +165,26 @@ onMounted(() => {
 					<NuxtImg src="/images/sobre.png" alt="Foto da Loja Hamilton Marcenaria Moderna" class="order-1 lg:order-2 lg:flex w-full h-96 object-cover lg:w-1/2 lg:h-auto mb-[10px] mx-auto p-4 rounded-3xl max-h-[500px]" />
 				</div>
 			</div>
+		</section>
+
+		<section ref="fotos" class="bg-white py-1 lg:py-[80px] text-center mb-5">
+			<h2 class="text-[#333] font-bold text-[32px] pt-[15px] lg:pt-0 uppercase mb-5">
+				Fotos
+			</h2>
+			<div class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-8 place-items-center px-10">
+				<NuxtImg src="/portfolio/1.jpg" alt="Portfolio 1" class="rounded-lg max-w-sm" />
+				<NuxtImg src="/portfolio/2.jpg" alt="Portfolio 2" class="rounded-lg max-w-sm" />
+				<NuxtImg src="/portfolio/3.jpg" alt="Portfolio 3" class="rounded-lg max-w-sm" />
+				<NuxtImg src="/portfolio/4.jpg" alt="Portfolio 4" class="rounded-lg max-w-xs md:max-w-sm 2xl:max-w-md" />
+				<NuxtImg src="/portfolio/5.jpg" alt="Portfolio 5" class="rounded-lg max-w-xs md:max-w-sm 2xl:max-w-md" />
+				<NuxtImg src="/portfolio/6.jpg" alt="Portfolio 6" class="rounded-lg max-w-xs md:max-w-sm 2xl:max-w-md" />
+				<NuxtImg src="/portfolio/7.jpg" alt="Portfolio 7" class="rounded-lg max-w-xs md:max-w-sm 2xl:max-w-md" />
+				<NuxtImg src="/portfolio/8.jpg" alt="Portfolio 8" class="rounded-lg max-w-xs md:max-w-sm 2xl:max-w-md" />
+				<NuxtImg src="/portfolio/9.jpg" alt="Portfolio 9" class="rounded-lg max-w-xs md:max-w-sm 2xl:max-w-md" />
+			</div>
+			<NuxtLink to="https://www.facebook.com/Hamiltonmm/photos" external target="_blank" class="uppercase text-[16px] inline-block py-[8px] px-[28px] rounded-[50px] transition-all duration-500 m-[10px] font-medium border-2 text-white bg-[#fc0324] border-[#fc0324] hover:bg-[#e73e3e] hover:border-[#e73e3e] cursor-pointer mt-20">
+				Veja mais no Facebook
+			</NuxtLink>
 		</section>
 
 		<section ref="orcamento" class="bg-fixed bg-center bg-cover relative py-[80px]" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/wppbg.jpg');">

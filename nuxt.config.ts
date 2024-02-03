@@ -1,5 +1,5 @@
 export default defineNuxtConfig({
-	modules: ['@nuxtjs/tailwindcss', '@nuxtjs/google-fonts', 'nuxt-icon', '@nuxtseo/module', '@nuxt/image', '@vueuse/nuxt'],
+	modules: ['@nuxtjs/tailwindcss', '@nuxtjs/google-fonts', 'nuxt-icon', '@nuxtjs/seo', '@nuxt/image', '@vueuse/nuxt'],
 	googleFonts: {
 		families: {
 			'Open+Sans': [300, 400, 500, 700],

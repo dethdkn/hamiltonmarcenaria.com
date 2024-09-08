@@ -1,3 +1,4 @@
+<!-- eslint-disable no-restricted-globals -->
 <script setup lang='ts'>
 const { y } = useWindowScroll()
 const { width } = useWindowSize()
@@ -84,8 +85,8 @@ defineOgImageComponent('Og', { title: 'Hamilton Marcenaria Moderna' })
           </li>
         </ul>
         <span class="block cursor-pointer lg:hidden" :class="{ '!absolute !right-[15px] !top-[15px]': menuOpen && width < 1024 }" role="button" @click="menuOpen = !menuOpen" @keydown.enter="menuOpen = !menuOpen">
-          <Icon v-if="menuOpen" name="octicon:x-16" color="white" size="28px" />
-          <Icon v-else name="ion:menu" color="white" size="28px" />
+          <Icon v-show="menuOpen" name="octicon:x-16" class="text-[28px] text-white" />
+          <Icon v-show="!menuOpen" name="ion:menu" class="text-[28px] text-white" />
         </span>
       </nav>
     </div>
@@ -118,7 +119,7 @@ defineOgImageComponent('Og', { title: 'Hamilton Marcenaria Moderna' })
             </p>
             <div class="bg-white bg-cover pb-[30px]">
               <div class="float-left flex size-[64px] flex-col items-center justify-center rounded-[50%] border-2 border-[#fc0324] bg-white text-center">
-                <Icon name="map:furniture-store" color="#fc0324" size="30px" />
+                <Icon name="map:furniture-store" class="text-[30px] text-[#fc0324]" />
               </div>
               <p class="mb-[5px] ms-[80px] text-[18px] font-medium uppercase text-black">
                 Móveis Planejados em MDF
@@ -129,7 +130,7 @@ defineOgImageComponent('Og', { title: 'Hamilton Marcenaria Moderna' })
             </div>
             <div class="bg-white bg-cover pb-[30px]">
               <div class="float-left flex size-[64px] flex-col items-center justify-center rounded-[50%] border-2 border-[#fc0324] bg-white text-center">
-                <Icon name="solar:closet-bold" color="#fc0324" size="30px" />
+                <Icon name="solar:closet-bold" class="text-[30px] text-[#fc0324]" />
               </div>
               <p class="mb-[5px] ms-[80px] text-[18px] font-medium uppercase text-black">
                 Modulados Inovadores
@@ -140,7 +141,7 @@ defineOgImageComponent('Og', { title: 'Hamilton Marcenaria Moderna' })
             </div>
             <div class="bg-white bg-cover pb-[30px]">
               <div class="float-left flex size-[64px] flex-col items-center justify-center rounded-[50%] border-2 border-[#fc0324] bg-white text-center">
-                <Icon name="entypo:tools" color="#fc0324" size="30px" />
+                <Icon name="entypo:tools" class="text-[30px] text-[#fc0324]" />
               </div>
               <p class="mb-[5px] ms-[80px] text-[18px] font-medium uppercase text-black">
                 Reformas em Geral
@@ -200,27 +201,27 @@ defineOgImageComponent('Og', { title: 'Hamilton Marcenaria Moderna' })
       </h2>
       <iframe title="Mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.353524138657!2d-43.23524962514366!3d-22.90032783763937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997ef332e8cc97%3A0x9820c8f34773c58c!2sR.%20S%C3%A3o%20Luiz%20Gonzaga%2C%201064%20-%20Benfica%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2020910-062!5e0!3m2!1sen!2sbr!4v1703626146204!5m2!1sen!2sbr" width="100%" height="380" frameborder="0" allowfullscreen class="border-0" />
       <div class="mt-10 grid grid-cols-1 place-items-center p-5 sm:grid-cols-2">
-        <div class="max-w-[300px]">
-          <Icon name="mingcute:location-2-line" color="#fc0324" size="24px" class="inline-block" />
-          <p class="inline text-black">
+        <div class="mt-8 flex items-center justify-center space-x-1">
+          <Icon name="mingcute:location-2-line" class="text-[24px] text-[#fc0324]" />
+          <p class="max-w-32 text-black">
             R. São Luiz Gonzaga 1064 - Benfica, Rio de Janeiro, RJ
           </p>
         </div>
-        <NuxtLink to="mailto:hamilton@rosa.dev.br" class="mt-8 sm:mt-0">
-          <Icon name="ph:envelope-bold" color="#fc0324" size="24px" class="inline-block" />
-          <p class="inline text-black">
+        <NuxtLink to="mailto:hamilton@rosa.dev.br" class="mt-8 flex items-center justify-center space-x-1">
+          <Icon name="ph:envelope-bold" class="text-[24px] text-[#fc0324]" />
+          <p class="text-black">
             hamilton@rosa.dev.br
           </p>
         </NuxtLink>
-        <NuxtLink to="https://api.whatsapp.com/send?phone=5521983833874&text=Ol%C3%A1%20Hamilton,%20gostaria%20de%20contratar%20um%20servi%C3%A7o!" external target="_blank" class="mt-8">
-          <Icon name="ic:twotone-whatsapp" color="#fc0324" size="24px" class="inline-block" />
-          <p class="inline text-black">
+        <NuxtLink to="https://api.whatsapp.com/send?phone=5521983833874&text=Ol%C3%A1%20Hamilton,%20gostaria%20de%20contratar%20um%20servi%C3%A7o!" external target="_blank" class="mt-8 flex items-center justify-center space-x-1">
+          <Icon name="ic:twotone-whatsapp" class="text-[24px] text-[#fc0324]" />
+          <p class="text-black">
             (21) 98383-3874
           </p>
         </NuxtLink>
-        <NuxtLink to="tel:22998128003" class="mt-8">
-          <Icon name="bi:phone" color="#fc0324" size="24px" class="inline-block" />
-          <p class="inline text-black">
+        <NuxtLink to="tel:22998128003" class="mt-8 flex items-center justify-center space-x-1">
+          <Icon name="bi:phone" class="text-[24px] text-[#fc0324]" />
+          <p class="text-black">
             (22) 99812-8003
           </p>
         </NuxtLink>
@@ -228,13 +229,13 @@ defineOgImageComponent('Og', { title: 'Hamilton Marcenaria Moderna' })
     </section>
   </main>
 
-  <footer class="bg-[#343b40] py-[30px] font-[14px]">
+  <footer class="bg-[#1E1E2E] py-[30px] font-[14px]">
     <div class="container mx-auto text-center">
       <span class="text-[#ccc]">Desenvolvido por <NuxtLink to="https://rosa.dev.br" external target="_blank" class="hover:text-[#F28AA9]">Gabriel Rosa</NuxtLink></span>
     </div>
   </footer>
 
   <span class="fixed bottom-[15px] right-[15px] z-[100] hidden size-9 cursor-pointer items-center justify-center rounded-lg bg-[#fc0324] transition-all duration-500 hover:bg-[#ca283e] md:flex" :class="{ 'opacity-100': yScrolled, 'invisible opacity-0': !yScrolled }" role="button" @click="scrollTo('Início')" @keydown.enter="scrollTo('Início')">
-    <Icon name="humbleicons:arrow-up" color="white" size="24px" class="inline-block" />
+    <Icon name="humbleicons:arrow-up" class="inline-block text-[24px] text-white" />
   </span>
 </template>

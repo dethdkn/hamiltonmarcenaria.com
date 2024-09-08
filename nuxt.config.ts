@@ -1,5 +1,5 @@
 export default defineNuxtConfig({
-  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/google-fonts', 'nuxt-icon', '@nuxtjs/seo', '@nuxt/image', '@vueuse/nuxt'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/google-fonts', '@nuxt/icon', '@nuxtjs/seo', '@nuxt/image', '@vueuse/nuxt'],
   css: ['~/assets/global.css'],
   googleFonts: {
     families: {
@@ -16,4 +16,5 @@ export default defineNuxtConfig({
   },
   linkChecker: { enabled: false },
   devtools: { enabled: true },
+  compatibilityDate: '2024-09-08',
 })

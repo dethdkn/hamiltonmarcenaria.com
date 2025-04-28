@@ -239,3 +239,36 @@ defineOgImageComponent('Og', { title: 'Hamilton Marcenaria Moderna' })
     <Icon name="humbleicons:arrow-up" class="inline-block text-[24px] text-white" />
   </span>
 </template>
+
+<!-- eslint-disable-next-line vue/no-restricted-block -->
+<style scoped>
+*::selection {
+  background: #fc0324;
+  color: white;
+}
+
+body {
+  background-color: white;
+  color: #666;
+  font-family: Poppins, sans-serif;
+}
+
+body::-webkit-scrollbar {
+  background-color: #EFF1F5;
+  width: 16px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #EFF1F5;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #babac0;
+  border-radius: 16px;
+  border: 4px solid #EFF1F5;
+}
+
+body::-webkit-scrollbar-button {
+  display: none;
+}
+</style>

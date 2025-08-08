@@ -1,6 +1,7 @@
 {
   "name": "hamiltonmarcenaria.com",
   "type": "module",
+  "version": "1.0.0",
   "private": true,
   "packageManager": "pnpm@10.14.0",
   "scripts": {
@@ -11,7 +12,8 @@
     "postinstall": "nuxt prepare",
     "typecheck": "nuxi typecheck",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "release": "eslint . && nuxi typecheck && bumpp"
   },
   "dependencies": {
     "@iconify-json/bi": "^1.2.4",
@@ -36,6 +38,7 @@
   },
   "devDependencies": {
     "@dethdkn/eslint-config": "^3.3.3",
+    "bumpp": "^10.2.2",
     "eslint": "^9.32.0",
     "vue-tsc": "^3.0.5"
   }

@@ -1,4 +1,3 @@
-<!-- eslint-disable no-restricted-globals -->
 <script setup lang='ts'>
 const { y } = useWindowScroll()
 const { width } = useWindowSize()
@@ -25,11 +24,11 @@ const orcamento = ref<HTMLElement | null>()
 const contato = ref<HTMLElement | null>()
 
 function scrollTo(to: string){
-  if(to === 'Início' && inicio.value) window.scrollTo({ top: inicio.value.offsetTop, behavior: 'smooth' })
-  if(to === 'Sobre' && sobre.value) window.scrollTo({ top: sobre.value.offsetTop, behavior: 'smooth' })
-  if(to === 'Fotos' && fotos.value) window.scrollTo({ top: fotos.value.offsetTop, behavior: 'smooth' })
-  if(to === 'Orçamento' && orcamento.value) window.scrollTo({ top: orcamento.value.offsetTop - 150, behavior: 'smooth' })
-  if(to === 'Contato' && contato.value) window.scrollTo({ top: contato.value.offsetTop, behavior: 'smooth' })
+  if(to === 'Início' && inicio.value) globalThis.scrollTo({ top: inicio.value.offsetTop, behavior: 'smooth' })
+  if(to === 'Sobre' && sobre.value) globalThis.scrollTo({ top: sobre.value.offsetTop, behavior: 'smooth' })
+  if(to === 'Fotos' && fotos.value) globalThis.scrollTo({ top: fotos.value.offsetTop, behavior: 'smooth' })
+  if(to === 'Orçamento' && orcamento.value) globalThis.scrollTo({ top: orcamento.value.offsetTop - 150, behavior: 'smooth' })
+  if(to === 'Contato' && contato.value) globalThis.scrollTo({ top: contato.value.offsetTop, behavior: 'smooth' })
   menuOpen.value = false
 }
 

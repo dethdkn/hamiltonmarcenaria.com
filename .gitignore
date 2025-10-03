@@ -3,6 +3,7 @@
 .data
 .nuxt
 .nitro
+.wrangler
 .cache
 dist
 
@@ -17,6 +18,7 @@ logs
 .DS_Store
 .fleet
 .idea
+.vscode
 
 # Local env files
 .env

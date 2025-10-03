@@ -9,8 +9,11 @@ if(error.value && 'statusCode' in error.value && 'message' in error.value){
   message.value = error.value.message
 }
 
-useHead({ title: `${statusCode.value}` })
-setTimeout(async () => clearError({ redirect: '/' }), 3000)
+useHead({ title: String(statusCode.value) })
+onMounted(() => {
+  const t = setTimeout(async () => clearError({ redirect: '/' }), 3000)
+  onUnmounted(() => clearTimeout(t))
+})
 </script>
 
 <template>

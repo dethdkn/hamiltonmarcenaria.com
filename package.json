@@ -3,7 +3,7 @@
   "type": "module",
   "version": "1.0.1",
   "private": true,
-  "packageManager": "pnpm@10.14.0",
+  "packageManager": "pnpm@10.18.0",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -16,30 +16,31 @@
     "release": "eslint . && nuxi typecheck && bumpp"
   },
   "dependencies": {
-    "@iconify-json/bi": "^1.2.4",
+    "@iconify-json/bi": "^1.2.6",
     "@iconify-json/entypo": "^1.2.1",
-    "@iconify-json/humbleicons": "^1.2.10",
-    "@iconify-json/ic": "^1.2.2",
-    "@iconify-json/ion": "^1.2.4",
+    "@iconify-json/humbleicons": "^1.2.12",
+    "@iconify-json/ic": "^1.2.4",
+    "@iconify-json/ion": "^1.2.6",
     "@iconify-json/map": "^1.2.2",
-    "@iconify-json/mingcute": "^1.2.3",
+    "@iconify-json/mingcute": "^1.2.5",
     "@iconify-json/ph": "^1.2.2",
-    "@iconify-json/solar": "^1.2.2",
+    "@iconify-json/solar": "^1.2.4",
     "@nuxt/fonts": "^0.11.4",
-    "@nuxt/icon": "^1.15.0",
+    "@nuxt/icon": "^2.0.0",
     "@nuxt/image": "^1.11.0",
-    "@nuxtjs/seo": "3.1.0",
-    "@nuxtjs/tailwindcss": "^6.14.0",
+    "@nuxtjs/seo": "3.2.2",
+    "@tailwindcss/vite": "^4.1.14",
     "@vercel/analytics": "^1.5.0",
-    "@vueuse/nuxt": "^13.6.0",
-    "nuxt": "^4.0.3",
-    "vue": "^3.5.18",
+    "@vueuse/nuxt": "^13.9.0",
+    "nuxt": "^4.1.2",
+    "tailwindcss": "^4.1.14",
+    "vue": "^3.5.22",
     "vue-router": "^4.5.1"
   },
   "devDependencies": {
-    "@dethdkn/eslint-config": "^3.3.3",
-    "bumpp": "^10.2.2",
-    "eslint": "^9.32.0",
-    "vue-tsc": "^3.0.5"
+    "@dethdkn/eslint-config": "^4.0.0",
+    "bumpp": "^10.2.3",
+    "eslint": "^9.36.0",
+    "vue-tsc": "^3.1.0"
   }
 }

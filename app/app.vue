@@ -74,17 +74,17 @@ defineOgImageComponent('Og', { title: 'Hamilton Marcenaria Moderna' })
     <div class="container mx-auto flex items-center justify-between">
       <NuxtImg src="/images/logo.png" alt="Hamilton Marcenaria Moderna" width="92" height="68" class="cursor-pointer" />
       <nav :class="{ 'fixed inset-0 z-50 overflow-hidden bg-[#4d4d4de6] transition-all duration-300': menuOpen && width < 1024 }">
-        <ul class="hidden items-center lg:flex" :class="{ '!absolute !bottom-[15px] !top-[55px] !block !w-full !overflow-auto !bg-white !py-[10px]': menuOpen && width < 1024 }">
-          <li v-for="nav in navigation" :key="nav.title" class="relative whitespace-nowrap py-[10px] pe-[24px]" :class="{ '!py-0': menuOpen && width < 1024 }">
-            <NuxtLink v-if="nav.url" :to="nav.url" external target="_blank" class="relative flex cursor-pointer items-center py-1 text-[14px] uppercase text-white transition-all duration-300 before:invisible before:absolute before:bottom-[-6px] before:left-0 before:h-[2px] before:w-full before:scale-x-0 before:bg-[#fc0324] before:transition-all before:duration-300 before:content-[''] hover:before:visible hover:before:scale-x-100" :class="{ '!px-[20px] !py-[10px] !text-[15px] !text-[#666666] before:!bg-white hover:!text-[#fc0324]': menuOpen && width < 1024 }" @click="menuOpen = false">
+        <ul class="hidden items-center lg:flex" :class="{ '!absolute !top-[55px] !bottom-[15px] !block !w-full !overflow-auto !bg-white !py-[10px]': menuOpen && width < 1024 }">
+          <li v-for="nav in navigation" :key="nav.title" class="relative py-[10px] pe-[24px] whitespace-nowrap" :class="{ '!py-0': menuOpen && width < 1024 }">
+            <NuxtLink v-if="nav.url" :to="nav.url" external target="_blank" class="relative flex cursor-pointer items-center py-1 text-[14px] text-white uppercase transition-all duration-300 before:invisible before:absolute before:bottom-[-6px] before:left-0 before:h-[2px] before:w-full before:scale-x-0 before:bg-[#fc0324] before:transition-all before:duration-300 before:content-[''] hover:before:visible hover:before:scale-x-100" :class="{ '!px-[20px] !py-[10px] !text-[15px] !text-[#666666] before:!bg-white hover:!text-[#fc0324]': menuOpen && width < 1024 }" @click="menuOpen = false">
               {{ nav.title }}
             </NuxtLink>
-            <p v-else role="button" class="relative flex cursor-pointer items-center py-1 text-[14px] uppercase text-white transition-all duration-300 before:invisible before:absolute before:bottom-[-6px] before:left-0 before:h-[2px] before:w-full before:scale-x-0 before:bg-[#fc0324] before:transition-all before:duration-300 before:content-[''] hover:before:visible hover:before:scale-x-100" :class="{ 'before:!visible before:!scale-x-100': current === nav.title, '!px-[20px] !py-[10px] !text-[15px] !text-[#666666] before:!bg-white hover:!text-[#fc0324]': menuOpen && width < 1024, '!text-[#fc0324]': current === nav.title && menuOpen && width < 1024 }" @click="scrollTo(nav.title)" @keydown.enter="scrollTo(nav.title)">
+            <p v-else role="button" class="relative flex cursor-pointer items-center py-1 text-[14px] text-white uppercase transition-all duration-300 before:invisible before:absolute before:bottom-[-6px] before:left-0 before:h-[2px] before:w-full before:scale-x-0 before:bg-[#fc0324] before:transition-all before:duration-300 before:content-[''] hover:before:visible hover:before:scale-x-100" :class="{ 'before:!visible before:!scale-x-100': current === nav.title, '!px-[20px] !py-[10px] !text-[15px] !text-[#666666] before:!bg-white hover:!text-[#fc0324]': menuOpen && width < 1024, '!text-[#fc0324]': current === nav.title && menuOpen && width < 1024 }" @click="scrollTo(nav.title)" @keydown.enter="scrollTo(nav.title)">
               {{ nav.title }}
             </p>
           </li>
         </ul>
-        <span class="block cursor-pointer lg:hidden" :class="{ '!absolute !right-[15px] !top-[15px]': menuOpen && width < 1024 }" role="button" @click="menuOpen = !menuOpen" @keydown.enter="menuOpen = !menuOpen">
+        <span class="block cursor-pointer lg:hidden" :class="{ '!absolute !top-[15px] !right-[15px]': menuOpen && width < 1024 }" role="button" @click="menuOpen = !menuOpen" @keydown.enter="menuOpen = !menuOpen">
           <Icon v-show="menuOpen" name="octicon:x-16" class="text-[28px] text-white" />
           <Icon v-show="!menuOpen" name="ion:menu" class="text-[28px] text-white" />
         </span>
@@ -94,13 +94,13 @@ defineOgImageComponent('Og', { title: 'Hamilton Marcenaria Moderna' })
 
   <section ref="inicio" class="relative h-screen w-full bg-[url('/images/hmmbg.jpg')] bg-cover bg-top before:absolute before:inset-0 before:bg-[#00000099] before:content-['']">
     <div class="absolute inset-0 flex flex-col items-center justify-center text-center">
-      <h1 class="mb-[10px] mt-[30px] text-[28px] font-bold uppercase leading-[36px] text-white md:text-[48px] md:leading-[56px]">
+      <h1 class="mt-[30px] mb-[10px] text-[28px] leading-[36px] font-bold text-white uppercase md:text-[48px] md:leading-[56px]">
         Hamilton Marcenaria Moderna
       </h1>
       <h2 class="mb-[50px] text-[18px] text-[#eee] md:text-[24px]">
         A melhor marcenaria do Rio de Janeiro
       </h2>
-      <p class="m-[10px] inline-block cursor-pointer rounded-[50px] border-2 border-white px-[28px] py-[8px] text-[16px] font-medium uppercase text-white transition-all duration-500 hover:border-[#fc0324] hover:bg-[#fc0324]" role="button" @click="scrollTo('Sobre')" @keydown.enter="scrollTo('Sobre')">
+      <p class="m-[10px] inline-block cursor-pointer rounded-[50px] border-2 border-white px-[28px] py-[8px] text-[16px] font-medium text-white uppercase transition-all duration-500 hover:border-[#fc0324] hover:bg-[#fc0324]" role="button" @click="scrollTo('Sobre')" @keydown.enter="scrollTo('Sobre')">
         Conhecer
       </p>
     </div>
@@ -111,7 +111,7 @@ defineOgImageComponent('Og', { title: 'Hamilton Marcenaria Moderna' })
       <div class="container mx-auto">
         <div class="flex flex-wrap items-center">
           <div class="order-2 px-4 lg:order-1 lg:w-1/2">
-            <h2 class="pt-[15px] text-[32px] font-bold uppercase text-[#333] lg:pt-0">
+            <h2 class="pt-[15px] text-[32px] font-bold text-[#333] uppercase lg:pt-0">
               Sobre
             </h2>
             <p class="mb-[30px]">
@@ -121,7 +121,7 @@ defineOgImageComponent('Og', { title: 'Hamilton Marcenaria Moderna' })
               <div class="float-left flex size-[64px] flex-col items-center justify-center rounded-[50%] border-2 border-[#fc0324] bg-white text-center">
                 <Icon name="map:furniture-store" class="text-[30px] text-[#fc0324]" />
               </div>
-              <p class="mb-[5px] ms-[80px] text-[18px] font-medium uppercase text-black">
+              <p class="ms-[80px] mb-[5px] text-[18px] font-medium text-black uppercase">
                 Móveis Planejados em MDF
               </p>
               <p class="ms-[80px] text-[14px]">
@@ -132,7 +132,7 @@ defineOgImageComponent('Og', { title: 'Hamilton Marcenaria Moderna' })
               <div class="float-left flex size-[64px] flex-col items-center justify-center rounded-[50%] border-2 border-[#fc0324] bg-white text-center">
                 <Icon name="solar:closet-bold" class="text-[30px] text-[#fc0324]" />
               </div>
-              <p class="mb-[5px] ms-[80px] text-[18px] font-medium uppercase text-black">
+              <p class="ms-[80px] mb-[5px] text-[18px] font-medium text-black uppercase">
                 Modulados Inovadores
               </p>
               <p class="ms-[80px] text-[14px]">
@@ -143,7 +143,7 @@ defineOgImageComponent('Og', { title: 'Hamilton Marcenaria Moderna' })
               <div class="float-left flex size-[64px] flex-col items-center justify-center rounded-[50%] border-2 border-[#fc0324] bg-white text-center">
                 <Icon name="entypo:tools" class="text-[30px] text-[#fc0324]" />
               </div>
-              <p class="mb-[5px] ms-[80px] text-[18px] font-medium uppercase text-black">
+              <p class="ms-[80px] mb-[5px] text-[18px] font-medium text-black uppercase">
                 Reformas em Geral
               </p>
               <p class="ms-[80px] text-[14px]">
@@ -157,7 +157,7 @@ defineOgImageComponent('Og', { title: 'Hamilton Marcenaria Moderna' })
     </section>
 
     <section ref="fotos" class="mb-5 bg-white py-1 text-center lg:py-[80px]">
-      <h2 class="mb-5 pt-[15px] text-[32px] font-bold uppercase text-[#333] lg:pt-0">
+      <h2 class="mb-5 pt-[15px] text-[32px] font-bold text-[#333] uppercase lg:pt-0">
         Fotos
       </h2>
       <div class="grid grid-cols-1 place-items-center gap-8 px-10 sm:grid-cols-1 lg:grid-cols-3">
@@ -171,7 +171,7 @@ defineOgImageComponent('Og', { title: 'Hamilton Marcenaria Moderna' })
         <NuxtImg src="/portfolio/8.jpg" alt="Portfolio 8" class="max-w-xs rounded-lg md:max-w-sm 2xl:max-w-md" />
         <NuxtImg src="/portfolio/9.jpg" alt="Portfolio 9" class="max-w-xs rounded-lg md:max-w-sm 2xl:max-w-md" />
       </div>
-      <NuxtLink to="https://www.facebook.com/Hamiltonmm/photos" external target="_blank" class="m-[10px] mt-20 inline-block cursor-pointer rounded-[50px] border-2 border-[#fc0324] bg-[#fc0324] px-[28px] py-[8px] text-[16px] font-medium uppercase text-white transition-all duration-500 hover:border-[#e73e3e] hover:bg-[#e73e3e]">
+      <NuxtLink to="https://www.facebook.com/hamiltonmm/photos" external target="_blank" class="m-[10px] mt-20 inline-block cursor-pointer rounded-[50px] border-2 border-[#fc0324] bg-[#fc0324] px-[28px] py-[8px] text-[16px] font-medium text-white uppercase transition-all duration-500 hover:border-[#e73e3e] hover:bg-[#e73e3e]">
         Veja mais no Facebook
       </NuxtLink>
     </section>
@@ -188,7 +188,7 @@ defineOgImageComponent('Og', { title: 'Hamilton Marcenaria Moderna' })
               Clique no botão para entrar em contato pelo whatsapp
             </p>
           </div>
-          <NuxtLink to="https://api.whatsapp.com/send?phone=5521983833874&text=Ol%C3%A1%20Hamilton,%20gostaria%20de%20contratar%20um%20servi%C3%A7o!" external target="_blank" class="m-[10px] mt-10 inline-block cursor-pointer rounded-[50px] border-2 border-white px-[28px] py-[8px] text-[16px] font-medium uppercase text-white transition-all duration-500 hover:border-[#fc0324] hover:bg-[#fc0324] lg:mt-0">
+          <NuxtLink to="https://api.whatsapp.com/send?phone=5521983833874&text=Ol%C3%A1%20Hamilton,%20gostaria%20de%20contratar%20um%20servi%C3%A7o!" external target="_blank" class="m-[10px] mt-10 inline-block cursor-pointer rounded-[50px] border-2 border-white px-[28px] py-[8px] text-[16px] font-medium text-white uppercase transition-all duration-500 hover:border-[#fc0324] hover:bg-[#fc0324] lg:mt-0">
             Whatsapp
           </NuxtLink>
         </div>
@@ -196,7 +196,7 @@ defineOgImageComponent('Og', { title: 'Hamilton Marcenaria Moderna' })
     </section>
 
     <section ref="contato" class="mb-10 bg-white py-1 text-center sm:mb-0 lg:py-[80px]">
-      <h2 class="pt-[15px] text-[32px] font-bold uppercase text-[#333] lg:pt-0">
+      <h2 class="pt-[15px] text-[32px] font-bold text-[#333] uppercase lg:pt-0">
         Contato
       </h2>
       <iframe title="Mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.353524138657!2d-43.23524962514366!3d-22.90032783763937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997ef332e8cc97%3A0x9820c8f34773c58c!2sR.%20S%C3%A3o%20Luiz%20Gonzaga%2C%201064%20-%20Benfica%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2020910-062!5e0!3m2!1sen!2sbr!4v1703626146204!5m2!1sen!2sbr" width="100%" height="380" frameborder="0" allowfullscreen class="border-0" />
@@ -235,7 +235,7 @@ defineOgImageComponent('Og', { title: 'Hamilton Marcenaria Moderna' })
     </div>
   </footer>
 
-  <span class="fixed bottom-[15px] right-[15px] z-[100] hidden size-9 cursor-pointer items-center justify-center rounded-lg bg-[#fc0324] transition-all duration-500 hover:bg-[#ca283e] md:flex" :class="{ 'opacity-100': yScrolled, 'invisible opacity-0': !yScrolled }" role="button" @click="scrollTo('Início')" @keydown.enter="scrollTo('Início')">
+  <span class="fixed right-[15px] bottom-[15px] z-[100] hidden size-9 cursor-pointer items-center justify-center rounded-lg bg-[#fc0324] transition-all duration-500 hover:bg-[#ca283e] md:flex" :class="{ 'opacity-100': yScrolled, 'invisible opacity-0': !yScrolled }" role="button" @click="scrollTo('Início')" @keydown.enter="scrollTo('Início')">
     <Icon name="humbleicons:arrow-up" class="inline-block text-[24px] text-white" />
   </span>
 </template>

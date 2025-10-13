@@ -16,7 +16,12 @@ export default defineNuxtConfig({
     cloudflare: {
       deployConfig: true,
       nodeCompat: true,
-      wrangler: { observability: { logs: { enabled: true, head_sampling_rate: 1, invocation_logs: true } } },
+      wrangler: {
+        name: 'hamiltonmarcenaria-com',
+        workers_dev: false,
+        route: 'hamiltonmarcenaria.com/*',
+        observability: { logs: { enabled: true, head_sampling_rate: 1, invocation_logs: true } },
+      },
     },
   },
   vite: { plugins: [tailwindcss()] },

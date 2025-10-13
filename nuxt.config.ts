@@ -10,8 +10,15 @@ export default defineNuxtConfig({
     description: 'Hamilton Marcenaria Moderna é uma empresa de móveis planejados em MDF, modulados, projetos sob medida e reformas em geral localizada no Rio de Janeiro.',
     identity: { type: 'Organization' },
   },
-  compatibilityDate: '2025-10-03',
-  nitro: { preset: 'cloudflare_module', cloudflare: { deployConfig: true, nodeCompat: true } },
+  compatibilityDate: '2025-10-10',
+  nitro: {
+    preset: 'cloudflare_module',
+    cloudflare: {
+      deployConfig: true,
+      nodeCompat: true,
+      wrangler: { observability: { logs: { enabled: true, head_sampling_rate: 1, invocation_logs: true } } },
+    },
+  },
   vite: { plugins: [tailwindcss()] },
   linkChecker: { enabled: false },
 })

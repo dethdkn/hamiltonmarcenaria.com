@@ -3,8 +3,8 @@
 .data
 .nuxt
 .nitro
-.wrangler
 .cache
+.wrangler
 dist
 
 # Node dependencies
